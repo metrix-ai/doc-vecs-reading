@@ -1,7 +1,9 @@
 import Prelude
 import Metrix.DocVecsReading.IO
 import Metrix.NlpData
+import Metrix.ClickstreamData
 import qualified Data.Vector as A
+
 
 main =
   do
@@ -9,9 +11,9 @@ main =
     parsingResult <- case readingResult of
       Right x -> return x
       Left x -> throwIO x
-    rows <- case parsingResult of
+    lookup <- case parsingResult of
       Right x -> return x
       Left x -> fail (show x)
-    unless (A.length rows == 10) (fail "Not 10 rows")
-    unless (A.all ((== 20000) . A.length . (\ (DocVec x) -> x) . snd) rows) (fail "Not 20000 topics")
-
+    case lookup (UriId 9401) of
+      Nothing -> fail "No expected URI is present"
+      Just (DocVec docVec) -> when (A.length docVec /= 20000) (fail "Not 20000 topics")
