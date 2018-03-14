@@ -1,0 +1,4 @@
+resolver: https://raw.githubusercontent.com/metrix-ai/stack-snapshot/8.2.1/snapshot.yaml
+extra-deps:
+- {git: "https://github.com/metrix-ai/clickstream-data", commit: "0.2"}
+- {git: "https://github.com/metrix-ai/nlp-data", commit: "0.1.4"}
