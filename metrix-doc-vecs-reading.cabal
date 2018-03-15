@@ -1,7 +1,7 @@
 name:
   metrix-doc-vecs-reading
 version:
-  0.2.0.1
+  0.2.1
 build-type:
   Simple
 cabal-version:
@@ -16,6 +16,8 @@ library
     Haskell2010
   exposed-modules:
     Metrix.DocVecsReading.IO
+    Metrix.DocVecsReading.Potoki.Produce
+    Metrix.DocVecsReading.Potoki.Transform
   other-modules:
     Metrix.DocVecsReading.Attoparsec
     Metrix.DocVecsReading.Foldl
