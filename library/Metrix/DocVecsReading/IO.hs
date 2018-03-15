@@ -16,5 +16,5 @@ readFromFile path =
   C.produceAndConsume
     (D.fileBytes path)
     (right' (E.transform
-      (A.parseBytes B.row)
+      (A.bufferize 128 >>> (A.parseBytes B.row))
       (right' (E.fold F.lookup))))

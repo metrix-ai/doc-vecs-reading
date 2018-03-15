@@ -1,7 +1,7 @@
 name:
   metrix-doc-vecs-reading
 version:
-  0.2
+  0.2.0.1
 build-type:
   Simple
 cabal-version:
