@@ -1,7 +1,7 @@
 name:
   metrix-doc-vecs-reading
 version:
-  0.2.1
+  0.2.2
 build-type:
   Simple
 cabal-version:
@@ -18,8 +18,8 @@ library
     Metrix.DocVecsReading.IO
     Metrix.DocVecsReading.Potoki.Produce
     Metrix.DocVecsReading.Potoki.Transform
-  other-modules:
     Metrix.DocVecsReading.Attoparsec
+  other-modules:
     Metrix.DocVecsReading.Foldl
     Metrix.DocVecsReading.Prelude
   build-depends:
